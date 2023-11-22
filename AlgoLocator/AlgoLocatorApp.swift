@@ -4,7 +4,8 @@ import SwiftUI
 struct AlgoLocatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StoreList()
+            .environmentObject(StoreLocatorModel())
         }
     }
 }

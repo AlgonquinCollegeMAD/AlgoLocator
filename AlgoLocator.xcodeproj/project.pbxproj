@@ -8,22 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		10056C822B0EA4CF00F6BEB1 /* AlgoLocatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C812B0EA4CF00F6BEB1 /* AlgoLocatorApp.swift */; };
-		10056C842B0EA4CF00F6BEB1 /* StoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C832B0EA4CF00F6BEB1 /* StoreList.swift */; };
+		10056C842B0EA4CF00F6BEB1 /* StoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C832B0EA4CF00F6BEB1 /* StoreListView.swift */; };
 		10056C862B0EA4D000F6BEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10056C852B0EA4D000F6BEB1 /* Assets.xcassets */; };
 		10056C8A2B0EA4D000F6BEB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10056C892B0EA4D000F6BEB1 /* Preview Assets.xcassets */; };
 		10056C912B0EA63400F6BEB1 /* StoreLocatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C902B0EA63400F6BEB1 /* StoreLocatorModel.swift */; };
 		10056C932B0EA65400F6BEB1 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C922B0EA65400F6BEB1 /* StoreModel.swift */; };
+		10056C982B0EAF1B00F6BEB1 /* StoreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C972B0EAF1B00F6BEB1 /* StoreMapView.swift */; };
+		10056CDB2B0EF7D800F6BEB1 /* LocatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056CDA2B0EF7D800F6BEB1 /* LocatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10056C7E2B0EA4CF00F6BEB1 /* AlgoLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgoLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10056C812B0EA4CF00F6BEB1 /* AlgoLocatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoLocatorApp.swift; sourceTree = "<group>"; };
-		10056C832B0EA4CF00F6BEB1 /* StoreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreList.swift; sourceTree = "<group>"; };
+		10056C832B0EA4CF00F6BEB1 /* StoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListView.swift; sourceTree = "<group>"; };
 		10056C852B0EA4D000F6BEB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10056C872B0EA4D000F6BEB1 /* AlgoLocator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlgoLocator.entitlements; sourceTree = "<group>"; };
 		10056C892B0EA4D000F6BEB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10056C902B0EA63400F6BEB1 /* StoreLocatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLocatorModel.swift; sourceTree = "<group>"; };
 		10056C922B0EA65400F6BEB1 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		10056C972B0EAF1B00F6BEB1 /* StoreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapView.swift; sourceTree = "<group>"; };
+		10056CDA2B0EF7D800F6BEB1 /* LocatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorModel.swift; sourceTree = "<group>"; };
+		10056CDC2B0EFE7200F6BEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +61,11 @@
 		10056C802B0EA4CF00F6BEB1 /* AlgoLocator */ = {
 			isa = PBXGroup;
 			children = (
+				10056CDC2B0EFE7200F6BEB1 /* Info.plist */,
 				10056C812B0EA4CF00F6BEB1 /* AlgoLocatorApp.swift */,
 				10056C962B0EACCF00F6BEB1 /* Views */,
 				10056C942B0EA65A00F6BEB1 /* App Models */,
-				10056C952B0EA6AD00F6BEB1 /* Agregate Models */,
+				10056C952B0EA6AD00F6BEB1 /* Observable Models */,
 				10056C852B0EA4D000F6BEB1 /* Assets.xcassets */,
 				10056C872B0EA4D000F6BEB1 /* AlgoLocator.entitlements */,
 				10056C882B0EA4D000F6BEB1 /* Preview Content */,
@@ -83,18 +89,20 @@
 			path = "App Models";
 			sourceTree = "<group>";
 		};
-		10056C952B0EA6AD00F6BEB1 /* Agregate Models */ = {
+		10056C952B0EA6AD00F6BEB1 /* Observable Models */ = {
 			isa = PBXGroup;
 			children = (
 				10056C902B0EA63400F6BEB1 /* StoreLocatorModel.swift */,
+				10056CDA2B0EF7D800F6BEB1 /* LocatorModel.swift */,
 			);
-			path = "Agregate Models";
+			path = "Observable Models";
 			sourceTree = "<group>";
 		};
 		10056C962B0EACCF00F6BEB1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				10056C832B0EA4CF00F6BEB1 /* StoreList.swift */,
+				10056C832B0EA4CF00F6BEB1 /* StoreListView.swift */,
+				10056C972B0EAF1B00F6BEB1 /* StoreMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,8 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				10056C912B0EA63400F6BEB1 /* StoreLocatorModel.swift in Sources */,
+				10056C982B0EAF1B00F6BEB1 /* StoreMapView.swift in Sources */,
 				10056C932B0EA65400F6BEB1 /* StoreModel.swift in Sources */,
-				10056C842B0EA4CF00F6BEB1 /* StoreList.swift in Sources */,
+				10056C842B0EA4CF00F6BEB1 /* StoreListView.swift in Sources */,
+				10056CDB2B0EF7D800F6BEB1 /* LocatorModel.swift in Sources */,
 				10056C822B0EA4CF00F6BEB1 /* AlgoLocatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +316,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlgoLocator/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -344,6 +355,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlgoLocator/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

@@ -1,6 +1,7 @@
 import Foundation
 
-struct Store: Hashable, Equatable {
+struct Store: Hashable, Equatable, Identifiable {
+  var id = UUID().uuidString
   var name: String
   var lon: Double
   var lat: Double
@@ -8,12 +9,5 @@ struct Store: Hashable, Equatable {
 
   static func == (lhs: Store, rhs: Store) -> Bool {
     lhs.lat == rhs.lat && lhs.lon == rhs.lon
-  }
-    
-  init(name: String, lon: Double, lat: Double, address: String) {
-    self.name = name
-    self.lon = lon
-    self.lat = lat
-    self.address = address
   }
 }

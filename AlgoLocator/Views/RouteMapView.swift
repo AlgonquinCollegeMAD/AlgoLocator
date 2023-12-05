@@ -23,7 +23,7 @@ struct RouteMapView: View {
         Marker(coordinate: startCoordinate) {
           VStack {
             Image(systemName: "apps.iphone")
-            Text(store.address)
+            Text("You are here!")
           }
         }
         .tint(.blue)

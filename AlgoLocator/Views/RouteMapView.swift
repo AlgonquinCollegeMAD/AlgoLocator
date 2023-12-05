@@ -15,7 +15,12 @@ struct RouteMapView: View {
   
   var body: some View {
     Map() {
-      Marker(store.address, coordinate: CLLocationCoordinate2D(latitude: store.lat, longitude: store.lon))
+      Marker(coordinate: destinyCoordinate) {
+        VStack {
+          Image(systemName: "cup.and.saucer.fill")
+          Text(store.address)
+        }
+      }
       if let route {
         MapPolyline(route)
           .stroke(.blue, lineWidth: 5)

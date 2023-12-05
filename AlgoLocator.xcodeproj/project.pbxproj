@@ -15,6 +15,7 @@
 		10056C932B0EA65400F6BEB1 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C922B0EA65400F6BEB1 /* StoreModel.swift */; };
 		10056C982B0EAF1B00F6BEB1 /* StoreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056C972B0EAF1B00F6BEB1 /* StoreMapView.swift */; };
 		10056CDB2B0EF7D800F6BEB1 /* LocatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10056CDA2B0EF7D800F6BEB1 /* LocatorModel.swift */; };
+		105B44422B1E5AE10022030F /* RouteMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105B44412B1E5AE10022030F /* RouteMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,10 @@
 		10056C972B0EAF1B00F6BEB1 /* StoreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMapView.swift; sourceTree = "<group>"; };
 		10056CDA2B0EF7D800F6BEB1 /* LocatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorModel.swift; sourceTree = "<group>"; };
 		10056CDC2B0EFE7200F6BEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		105B44412B1E5AE10022030F /* RouteMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapView.swift; sourceTree = "<group>"; };
+		105B44442B1E8FB70022030F /* AlgonquinCollege.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AlgonquinCollege.gpx; sourceTree = "<group>"; };
+		105B44462B1E90D80022030F /* BYC.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BYC.gpx; sourceTree = "<group>"; };
+		105B44472B1E93340022030F /* RideauMall.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RideauMall.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,7 @@
 				10056C962B0EACCF00F6BEB1 /* Views */,
 				10056C942B0EA65A00F6BEB1 /* App Models */,
 				10056C952B0EA6AD00F6BEB1 /* Observable Models */,
+				105B44452B1E8FCC0022030F /* GPX */,
 				10056C852B0EA4D000F6BEB1 /* Assets.xcassets */,
 				10056C872B0EA4D000F6BEB1 /* AlgoLocator.entitlements */,
 				10056C882B0EA4D000F6BEB1 /* Preview Content */,
@@ -103,8 +109,27 @@
 			children = (
 				10056C832B0EA4CF00F6BEB1 /* StoreListView.swift */,
 				10056C972B0EAF1B00F6BEB1 /* StoreMapView.swift */,
+				105B44412B1E5AE10022030F /* RouteMapView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		105B44452B1E8FCC0022030F /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				105B444A2B1F794A0022030F /* Waypoints */,
+			);
+			path = GPX;
+			sourceTree = "<group>";
+		};
+		105B444A2B1F794A0022030F /* Waypoints */ = {
+			isa = PBXGroup;
+			children = (
+				105B44442B1E8FB70022030F /* AlgonquinCollege.gpx */,
+				105B44462B1E90D80022030F /* BYC.gpx */,
+				105B44472B1E93340022030F /* RideauMall.gpx */,
+			);
+			path = Waypoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +204,7 @@
 			files = (
 				10056C912B0EA63400F6BEB1 /* StoreLocatorModel.swift in Sources */,
 				10056C982B0EAF1B00F6BEB1 /* StoreMapView.swift in Sources */,
+				105B44422B1E5AE10022030F /* RouteMapView.swift in Sources */,
 				10056C932B0EA65400F6BEB1 /* StoreModel.swift in Sources */,
 				10056C842B0EA4CF00F6BEB1 /* StoreListView.swift in Sources */,
 				10056CDB2B0EF7D800F6BEB1 /* LocatorModel.swift in Sources */,

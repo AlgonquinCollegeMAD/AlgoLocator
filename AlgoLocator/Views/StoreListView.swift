@@ -5,12 +5,18 @@ struct StoreListView: View {
   @EnvironmentObject var model: StoreLocatorModel
   
   var body: some View {
-    List {
-      ForEach(model.stores, id:\.self) { store in
-        StoreRowView(store: store)
+    NavigationStack{
+      List {
+        ForEach(model.stores, id:\.self) { store in
+          NavigationLink {
+            RouteMapView(store: store)
+          } label: {
+            StoreRowView(store: store)
+          }
+        }
       }
+      .padding()
     }
-    .padding()
   }
 }
 

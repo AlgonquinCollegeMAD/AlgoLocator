@@ -13,26 +13,45 @@ struct RouteMapView: View {
     CLLocationCoordinate2D(latitude: store.lat, longitude: store.lon)
   }
   
+  var startCoordinate: CLLocationCoordinate2D? {
+    locator.currentLocationCoordinate2D
+  }
+  
   var body: some View {
-    Map() {
-      Marker(coordinate: destinyCoordinate) {
-        VStack {
-          Image(systemName: "cup.and.saucer.fill")
-          Text(store.address)
+    if let route = route, let startCoordinate = startCoordinate {
+      Map() {
+        Marker(coordinate: startCoordinate) {
+          VStack {
+            Image(systemName: "apps.iphone")
+            Text(store.address)
+          }
         }
-      }
-      if let route {
+        .tint(.blue)
+        
+        Marker(coordinate: destinyCoordinate) {
+          VStack {
+            Image(systemName: "cup.and.saucer.fill")
+            Text(store.address)
+          }
+        }
+        .tint(.green)
+        
         MapPolyline(route)
           .stroke(.blue, lineWidth: 5)
       }
-    }
-    .onAppear() {
-      updateRoute()
-    }
-    .onChange(of: locator.currentLocation) {
-      updateRoute()
+      .onChange(of: locator.currentLocation) {
+        updateRoute()
+      }
+    } else {
+      ProgressView() {
+        Text("Loading route...")
+      }
+      .onAppear() {
+        updateRoute()
+      }
     }
   }
+  
   func updateRoute() {
     guard let deviceCoordinate = locator.currentLocation?.coordinate else { return }
     route = nil
